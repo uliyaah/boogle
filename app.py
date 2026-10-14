@@ -127,8 +127,8 @@ def jsontest():
 
 @app.get('/search')
 def search():
-    query = request.args.get("q", "").strip()
-    if query:
+    query = request.args.get("q", "")
+    if query.strip():
         with database_connection() as connection:
             with connection.cursor() as cursor:
                 cursor.execute(
