@@ -1,3 +1,4 @@
 state.pem
 .venv
 ec2*
+server.txt
